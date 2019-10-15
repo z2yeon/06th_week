@@ -1,24 +1,19 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
-
-#include <stdio.h>
-#include <stdlib.h>
-
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+#include <time.h>
 
 
-    int square(int n);
-
-    int main(void)
-	{
-	int result;
-	result=square(5);
-	printf("%d",result);
-	}
-	
-	int square(int n)
-	{
-		return(n*n);
-	}
+   int main(void)
+   {
+   	int i;
+   	int max=45;
+   	
+   	srand((unsigned)time (NULL));//현재 시간에 맞게 나올 시드를 결정 
+   	for(i=0;i<6;i++)
+	   {
+   	    printf("%d",1+rand()%max);
+	   }
+   	
+   	 
+   	return 0;
+   }
