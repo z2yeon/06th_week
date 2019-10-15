@@ -1,19 +1,42 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
 
 
+   
    int main(void)
    {
-   	int i;
-   	int max=45;
+   	int n,r;
    	
-   	srand((unsigned)time (NULL));//현재 시간에 맞게 나올 시드를 결정 
-   	for(i=0;i<6;i++)
-	   {
-   	    printf("%d",1+rand()%max);
-	   }
+   	printf("input n and r: ");
+   	scanf("%d%d",&n,&r);
    	
-   	 
-   	return 0;
+   	printf("%d\n",combination(n,r));
+   	
+    return combination(n,r);
    }
+   
+     //팩토리얼 함수 
+   int factorial(int n)
+   {
+	int fac=1,i;
+	for(i=1;i<=n;i++)
+	{
+		fac=fac*i;
+	}
+	return (fac);
+   }
+   
+   //콤비네이션 함수
+    int combination(int n,int r)
+   {
+   	int comb;
+   	comb=factorial(n)/(factorial(n-r)*factorial(r));
+   	return (comb);
+   }
+   
+    
+
+   
+
+
+
